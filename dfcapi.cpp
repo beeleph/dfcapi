@@ -6,11 +6,20 @@ using json = nlohmann::json;
 #include <stdio.h>
 #include <curl/curl.h>
 
+namespace DFCAPI {
+
 size_t writeFunction(void* ptr, size_t size, size_t nmemb, std::string* data) {
     data->append((char*)ptr, size * nmemb);
     return size * nmemb;
 }
+
+std::string getFiles(std::string condition,std::string name, std::string password){
+
+}
  
+std::string performRequest(){
+  
+}
 int main(void)
 {
   // here should be only func calls aka get
@@ -71,4 +80,6 @@ int main(void)
   curl_global_cleanup();
  
   return 0;
+}
+
 }
